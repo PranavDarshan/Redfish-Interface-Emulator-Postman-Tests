@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "f91e5a9b-77ec-40e9-8db8-ac5d3010e7b0",
 		"name": "Bios",
+		"description": "### BIOS API Postman Collection Overview\n\nThis collection provides API endpoints for managing BIOS settings via the Redfish interface. It includes operations for modifying BIOS configuration parameters and resetting them to default values—commonly used in firmware testing or BMC-based system management.\n\n#### 🔹 **Collection Features**\n\n- 🛠️ **Bios_Settings**: Updates BIOS attributes such as `BootMode` using a PATCH request.\n    \n- 🔁 **Bios_Reset**: Resets BIOS settings to their default state through the `Bios.ResetBios` action.\n    \n\n#### **Authentication**\n\nUses HTTP Basic Authentication:\n\n- **Username**: `Administrator`\n    \n- **Password**: `Password`\n    \n\n#### **Typical Use Cases**\n\n- Automate BIOS configuration during system provisioning\n    \n- Test BMC Redfish firmware support for BIOS patching\n    \n- Reset BIOS settings for recovery or clean testing states",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "39650421"
 	},
@@ -48,6 +49,104 @@
 						"System-1",
 						"Bios",
 						"Settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Bios Settings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Systems/System-1/Bios",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-1",
+						"Bios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Bios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Systems/System-1/Bios",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-1",
+						"Bios"
 					]
 				}
 			},

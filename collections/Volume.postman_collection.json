@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "f71530a9-1e51-4ba1-ae50-474985054bbc",
 		"name": "Volume",
+		"description": "### Volume API Postman Collection Overview\n\nThis collection provides a comprehensive set of API requests to test volume creation and deletion functionality using the Redfish protocol. It targets a local Redfish service (`localhost:5000`) and demonstrates various volume management scenarios through POST and DELETE requests.\n\n#### 🔹 **Collection Features**\n\n- ✅ **Volume Creation** with RAID1 configuration\n    \n- 🚫 **Error Handling** for:\n    \n    - Insufficient or invalid number of drives\n        \n    - Duplicate drive usage\n        \n    - Drives from mismatched chassis\n        \n    - Exceeding capacity limits\n        \n- ❌ **Volume Deletion** by specific resource path\n    \n\n#### **Authentication**\n\nAll requests use HTTP Basic Authentication with default credentials:\n\n- **Username**: `Administrator`\n    \n- **Password**: `Password`\n    \n\n#### **Intended Use**\n\n- Test storage controller firmware or mock Redfish servers\n    \n- Validate backend logic for volume provisioning\n    \n- Simulate edge cases for RAID configuration",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "39650421"
 	},
@@ -49,6 +50,109 @@
 						"Storage",
 						"Storage-1",
 						"Volumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Volume",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Systems/System-1/Storage/Storage-1/Volumes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-1",
+						"Storage",
+						"Storage-1",
+						"Volumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Volume-1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Systems/System-1/Storage/Storage-1/Volumes/Volume-1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-1",
+						"Storage",
+						"Storage-1",
+						"Volumes",
+						"Volume-1"
 					]
 				}
 			},

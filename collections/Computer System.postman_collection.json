@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "2d11b495-8130-4af2-86e3-f0ad82f06b1c",
 		"name": "Computer System",
+		"description": "### Computer System API Postman Collection Overview\n\nThis Postman collection contains a minimal test scenario for managing computer system reset actions using the Redfish API. It is focused on validating system control functionality typically handled by a BMC (Baseboard Management Controller).\n\n#### 🔹 **Collection Feature**\n\n- 🔄 **Computer_Reset**: Performs a system reset by issuing a `ComputerSystem.Reset` action with a specified `ResetType` (e.g., `On`, `ForceOff`, etc.).\n    \n\n#### **Authentication**\n\nAll requests use HTTP Basic Authentication:\n\n- **Username**: `Administrator`\n    \n- **Password**: `Password`\n    \n\n#### **Usage Context**\n\n- Redfish API testing for system reset capabilities\n    \n- BMC firmware or simulator validation\n    \n- Integration testing in automated environments",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "39650421"
 	},
