@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "f71530a9-1e51-4ba1-ae50-474985054bbc",
+		"name": "Volume",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39650421"
+	},
+	"item": [
+		{
+			"name": "Volume_Creation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"Links\": {     \r\n    \"Drives\": [       \r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-1/Drives/Drive-1\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-1/Drives/Drive-4\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-1/Drives/Drive-5\"}\r\n        ]   \r\n    },   \r\n        \"RAIDType\": \"RAID1\",   \r\n        \"IOPerfModeEnabled\": false,\r\n        \"CapacityBytes\": 5000,   \r\n        \"WriteCachePolicy\": \"ProtectedWriteBack\",   \r\n        \"ReadCachePolicy\": \"ReadAhead\",   \r\n        \"DisplayName\": \"My Boot Volume\"\r\n    } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Systems/System-1/Storage/Storage-1/Volumes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-1",
+						"Storage",
+						"Storage-1",
+						"Volumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Number_of_Drives_Error",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"Links\": {     \r\n    \"Drives\": [       \r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-1/Drives/Drive-1\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-1/Drives/Drive-4\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-1/Drives/Drive-5\"}\r\n        ]   \r\n    },   \r\n        \"RAIDType\": \"RAID1\",   \r\n        \"IOPerfModeEnabled\": false,\r\n        \"CapacityBytes\": 5000,   \r\n        \"WriteCachePolicy\": \"ProtectedWriteBack\",   \r\n        \"ReadCachePolicy\": \"ReadAhead\",   \r\n        \"DisplayName\": \"My Boot Volume\"\r\n    } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Systems/System-1/Storage/Storage-1/Volumes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-1",
+						"Storage",
+						"Storage-1",
+						"Volumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Duplicate_Error",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"Links\": {     \r\n    \"Drives\": [       \r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-1/Drives/Drive-2\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-1/Drives/Drive-3\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-1/Drives/Drive-4\"}\r\n        ]   \r\n    },   \r\n        \"RAIDType\": \"RAID1\",   \r\n        \"IOPerfModeEnabled\": false,\r\n        \"CapacityBytes\": 5000,   \r\n        \"WriteCachePolicy\": \"ProtectedWriteBack\",   \r\n        \"ReadCachePolicy\": \"ReadAhead\",   \r\n        \"DisplayName\": \"My Boot Volume\"\r\n    } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Systems/System-1/Storage/Storage-1/Volumes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-1",
+						"Storage",
+						"Storage-1",
+						"Volumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chassis_Error",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"Links\": {     \r\n    \"Drives\": [       \r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-2/Drives/Drive-1\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-2/Drives/Drive-2\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-2/Drives/Drive-3\"}\r\n        ]   \r\n    },   \r\n        \"RAIDType\": \"RAID1\",   \r\n        \"IOPerfModeEnabled\": false,\r\n        \"CapacityBytes\": 5000,   \r\n        \"WriteCachePolicy\": \"ProtectedWriteBack\",   \r\n        \"ReadCachePolicy\": \"ReadAhead\",   \r\n        \"DisplayName\": \"My Boot Volume\"\r\n    } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Systems/System-1/Storage/Storage-1/Volumes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-1",
+						"Storage",
+						"Storage-1",
+						"Volumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Capacity_Exceeded",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"Links\": {     \r\n    \"Drives\": [       \r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-2/Drives/Drive-1\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-2/Drives/Drive-2\"},\r\n            { \"@odata.id\": \"/redfish/v1/Chassis/Chassis-2/Drives/Drive-3\"}\r\n        ]   \r\n    },   \r\n        \"RAIDType\": \"RAID1\",   \r\n        \"IOPerfModeEnabled\": false,\r\n        \"CapacityBytes\": 5000000000000000,   \r\n        \"WriteCachePolicy\": \"ProtectedWriteBack\",   \r\n        \"ReadCachePolicy\": \"ReadAhead\",   \r\n        \"DisplayName\": \"My Boot Volume\"\r\n    } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Systems/System-2/Storage/Storage-1/Volumes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-2",
+						"Storage",
+						"Storage-1",
+						"Volumes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Volume_Deletion",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/redfish/v1/Systems/System-1/Storage/Storage-1/Volumes/Volume-1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Systems",
+						"System-1",
+						"Storage",
+						"Storage-1",
+						"Volumes",
+						"Volume-1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

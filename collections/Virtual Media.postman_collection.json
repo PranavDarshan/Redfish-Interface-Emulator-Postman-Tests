@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "188534b7-b7a7-48b7-8b06-a8b9f88057d0",
+		"name": "Virtual Media",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39650421"
+	},
+	"item": [
+		{
+			"name": "InsertMedia",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Image\": \"https://secure-server.local/media/sample.iso\",\r\n  \"UserName\": \"myuser\",\r\n  \"Password\": \"mypassword1\",\r\n  \"WriteProtected\": true,\r\n  \"ImageName\":\"demoImage\",\r\n  \"TransferProtocolType\": \"HTTPS\",\r\n  \"TransferMethod\": \"Stream\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Managers/BMC-1/VirtualMedia/CD/Actions/VirtualMedia.InsertMedia",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Managers",
+						"BMC-1",
+						"VirtualMedia",
+						"CD",
+						"Actions",
+						"VirtualMedia.InsertMedia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EjectMedia",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/redfish/v1/Managers/BMC-1/VirtualMedia/CD/Actions/VirtualMedia.EjectMedia",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"redfish",
+						"v1",
+						"Managers",
+						"BMC-1",
+						"VirtualMedia",
+						"CD",
+						"Actions",
+						"VirtualMedia.EjectMedia"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
